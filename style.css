@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Resetting Default Styles:
+
+The * selector applies to all elements and removes default margins and padding (margin: 0; padding: 0;).
+box-sizing: border-box; ensures that padding and borders are included in an element's width and height. This makes layout calculations simpler.
+
+
+Body Styling:
+
+font-family: Arial, sans-serif; sets a simple, readable font across the whole page.
+background-color: #f4f4f4; gives the page a light gray background, adding contrast with other elements. */
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+}
+
+/* Full-Screen Container:
+height: 100vh; and width: 100vw; make the container take up the entire viewport.
+display: flex; enables Flexbox layout, making it easier to center items.
+
+Centering Content:
+flex-direction: column; arranges child elements in a vertical column.
+justify-content: center; align-items: center; centers child elements both vertically and horizontally. */
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 3px solid #333333;
+    border-radius: 12px;
+    box-shadow:6px 6px 0px #333333 ;
+}
+
+/* Container for the Game Area:
+display: flex; flex-direction: column; align-items: center; makes this a vertical container with centered elements inside it.
+
+Visual Styling:
+background-color: #ffffff; gives the main container a white background for a clean look.
+padding: 20px; creates space around the content inside the main container.
+border: 3px solid #333333; gives it a thick, dark border typical of neubrutalism.
+border-radius: 12px; slightly rounds the corners.
+box-shadow: 8px 8px 0px #333333; creates a bold shadow that makes the box stand out. */
+
+.main h1{
+    font-size:50px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.main h2{
+    display:inline-block ;
+    color: #ffffff;
+    background-color: #333333;
+    border: 2px solid #333333;
+    padding: 12px 5px;
+    border-radius:8px;
+    margin: 8px;
+}
+
+/* Main Header (h1):
+
+font-size: 50px; makes the main header large and prominent.
+color: #333333; applies a dark color that contrasts well with the white background.
+margin-bottom: 10px; creates spacing below the header.
+
+Score/Timer Display (h2):
+
+display: inline-block; treats each h2 as a box, allowing padding and margins to work as intended.
+color: #ffffff; sets the text to white, while background-color: #333333; makes the background dark.
+border: 2px solid #333333; defines a thin dark border.
+padding: 12px 5px; adds space inside the element, making the text more readable.
+border-radius: 8px; rounds the corners slightly. */
+
+button{
+    width: 200px;
+    padding: 10px 5px;
+    margin: 10px;
+    background-color: #ffffff;
+    color: #333333;
+    border: 3px solid #333333;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #333333;
+    transition: transform 0.1s ease;
+}
+
+button:hover {
+    transform:translate(-3px,-3px);
+    box-shadow: 6px 6px 0px #333333;
+
+}
+
+button:active {
+    transform: translate(3px,3px);
+    box-shadow: 2px 2px 0px #333333
+}
+/* Base Button Style:
+
+width: 200px; padding: 10px 5px; controls the button’s size.
+background-color: #ffdf00; uses a bold yellow color, while color: #333333; makes the text dark for contrast.
+border: 3px solid #333333; adds a thick border, and box-shadow: 4px 4px 0px #333333; gives a shadow effect.
+cursor: pointer; changes the cursor to a pointer, indicating that this element is clickable.
+
+Hover and Active States:
+
+hover state: transform: translate(-2px, -2px); shifts the button slightly upward and left, making it look like it's lifting when hovered. box-shadow: 6px 6px 0px #333333; deepens the shadow.
+active state: transform: translate(2px, 2px); shifts the button in the opposite direction to simulate a press effect. */
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-gap: 12px;
+    margin-top: 20px;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: #ffdf00;
+    border: 3px solid #333333;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px #333333;
+    cursor: url('/Assets/hammer-removebg-preview.png'), auto;
+    transition: background-color 0.2s ease;
+}
+.square:hover{
+    background-color: #ffbf00;
+}
+
+.mole {
+    background: url('Assets/WhatsApp\ Image\ 2024-04-23\ at\ 21.32.48_c6efa150.jpg') no-repeat center center;
+    background-size: cover;
+    /* Fallback color */
+    background-color: #ffdf00;
+}
